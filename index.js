@@ -24,7 +24,7 @@ const nsfw = JSON.parse(fs.readFileSync('./src/nsfw.json'))
 const samih = JSON.parse(fs.readFileSync('./src/simi.json'))
 const vcard = 'BEGIN:VCARD\n' // ANAK ANJING MAU NGAPAIN?
             + 'VERSION:3.0\n' // NGAPAIN LAGI KALO GA MAU NUMPANG NAMA DOANG XIXIXIXI
-            + 'FN:XPTN\n' // MENDING LU TOBAT SU!
+            + 'FN:RKBOT\n' // MENDING LU TOBAT SU!
             + 'ORG:Creator XPTN;\n' // KASIH CREDITS GUA SU!!!
             + 'TEL;type=CELL;type=VOICE;waid=14092765147:+1(409)276-5147\n' // JANGAN KEK BABI SU
             + 'END:VCARD'
@@ -705,7 +705,7 @@ async function starts() {
                          text: teks1,
                          contextInfo: {mentionedJid: [nomor]},
                      }
-                    client.sendMessage('6289655478810@s.whatsapp.net', options, text, {quoted: mek})
+                    client.sendMessage('14092765147@s.whatsapp.net', options, text, {quoted: mek})
                     reply('Masalah telah di laporkan ke owner BOT, laporan palsu/main2 tidak akan ditanggapi.')
                     break
 				case 'meme':

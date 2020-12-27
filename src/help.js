@@ -17,7 +17,7 @@ const help = (prefix) => {
 ┣➥ *${prefix}Thanks To #XP-TN*
 ┣➥ *${prefix}Support Bot XPTN*
 ┣➥ *${prefix}Web Api : xptnbotapi.herokuapp.com*
-┣➥ *${prefix}Github : github.com/ramadhankukuh/RKBOT
+┣➥ *${prefix}Github : github.com/ramadhankukuh/RKBOT*
 ┃
 ┣━━━°❀ ❬ UPDATE COMMAND ❭ ❀°━━━⊱
 ┃
@@ -69,6 +69,7 @@ const help = (prefix) => {
 ┣➥ *${prefix}promote* [tag]
 ┣➥ *${prefix}setpp*
 ┣➥ *${prefix}setpp2*
+┣➥ *${prefix}setpp3*
 ┣➥ *${prefix}group* [buka/tutup]
 ┣➥ *${prefix}welcome* [1/0]
 ┣➥ *${prefix}nsfw* [1/0]

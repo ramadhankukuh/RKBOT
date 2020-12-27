@@ -1,6 +1,6 @@
 const help = (prefix) => { 
 	return `                 
-┏━━━°❀ ❬ OWNER CIMMAND ❭ ❀°━━━┓
+┏━━━°❀ ❬ OWNER COMMAND ❭ ❀°━━━┓
 ┃
 ┏❉ *${prefix}bc*
 ┣❉ *${prefix}block*
@@ -96,7 +96,7 @@ const help = (prefix) => {
 ┣➥ *${prefix}url2img*
 ┃
 ┣━━━━━━━━━━━━━━━━━━━━
-┃ ${prefix}*Follow IG* ~_xptn~
+┃ ${prefix}*Follow IG* ~ramadhankukuh~
 ┗━━━━━━━━━━━━━━━━━━━━`
 }
 exports.help = help

@@ -15,7 +15,7 @@ const help = (prefix) => {
 ┣━━━°❀ ❬ DONASI | BESTFREND ❭ ❀°━━━⊱
 ┃
 ┣➥ *${prefix}donasi*
-┣➥ *${prefix}Thanks To #Alfa📣*
+┣➥ *${prefix}Thanks To #XP-TN*
 ┣➥ *${prefix}Support Bot XPTN*
 ┣➥ *${prefix}Web Api : xptnbotapi.herokuapp.com*
 ┃

@@ -1,10 +1,10 @@
 const help = (prefix) => { 
 	return `                 
-┏━━━°❀ ❬ OWNER COMMAND ❭ ❀°━━━┓
+┏━━━°❀ ❬ BOT COMMAND ❭ ❀°━━━┓
 ┃
-┏❉ *${prefix}bc*
-┣❉ *${prefix}block*
-┣❉ *${prefix}unblock*
+┏❉ *${prefix}info*
+┣❉ *${prefix}donasi*
+┣❉ *${prefix}creator*
 ┃
 ┣━━━°❀ ❬ STICKER COMMAND ❭ ❀°━━━⊱
 ┃
@@ -12,12 +12,12 @@ const help = (prefix) => {
 ┣➥ *${prefix}tsticker*
 ┣➥ *${prefix}nulis*
 ┃
-┣━━━°❀ ❬ DONASI | BESTFREND ❭ ❀°━━━⊱
+┣━━━°❀ ❬ BESTFREND ❭ ❀°━━━⊱
 ┃
-┣➥ *${prefix}donasi*
 ┣➥ *${prefix}Thanks To #XP-TN*
 ┣➥ *${prefix}Support Bot XPTN*
 ┣➥ *${prefix}Web Api : xptnbotapi.herokuapp.com*
+┣➥ *${prefix}Github : github.com/ramadhankukuh/RKBOT
 ┃
 ┣━━━°❀ ❬ UPDATE COMMAND ❭ ❀°━━━⊱
 ┃
@@ -51,6 +51,7 @@ const help = (prefix) => {
 ┣➥ *${prefix}nsfwloli*
 ┣➥ *${prefix}nsfwneko*
 ┣➥ *${prefix}loli*
+┣➥ *${prefix}wait*
 ┃Jika Inging mengaktifkan nya ketik
 ┃nsfw1 kalo mau di nonaktifkan nsfw0
 ┣━━━°❀ ❬ COMMAND DOWNLOADER ❭ ❀°━━⊱
@@ -67,6 +68,7 @@ const help = (prefix) => {
 ┣➥ *${prefix}demote* [tag]
 ┣➥ *${prefix}promote* [tag]
 ┣➥ *${prefix}setpp*
+┣➥ *${prefix}setpp2*
 ┣➥ *${prefix}group* [buka/tutup]
 ┣➥ *${prefix}welcome* [1/0]
 ┣➥ *${prefix}nsfw* [1/0]
@@ -76,6 +78,7 @@ const help = (prefix) => {
 ┣━━━━━°❀ ❬ 𝙊𝙒𝙉𝙀𝙍 ❭ ❀°━━━━⊱
 ┃
 ┣➥ *${prefix}bc* 
+┣➥ *${prefix}bc2*
 ┣➥ *${prefix}leave*
 ┣➥ *${prefix}clearall*
 ┣➥ *${prefix}setprefix*
@@ -83,6 +86,11 @@ const help = (prefix) => {
 ┣➥ *${prefix}block*
 ┣➥ *${prefix}unblock*
 ┣➥ *${prefix}getses*
+┣➥ *${prefix}hidetag*
+┣➥ *${prefix}hidetag2*
+┣➥ *${prefix}hidetag3*
+┣➥ *${prefix}block*
+┣➥ *${prefix}unblock*
 ┃
 ┣━━━━°❀ ❬ 𝙊𝙏𝙃𝙀𝙍 ❭ ❀°━━━━━⊱
 ┃

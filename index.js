@@ -21,12 +21,13 @@ const { removeBackgroundFromImageFile } = require('remove.bg')
 const imgbb = require('imgbb-uploader')
 const welkom = JSON.parse(fs.readFileSync('./src/welkom.json'))
 const nsfw = JSON.parse(fs.readFileSync('./src/nsfw.json'))
+const anime = JSON.parse(fs.readFileSync('./src/anime.json'))
 const samih = JSON.parse(fs.readFileSync('./src/simi.json'))
 const vcard = 'BEGIN:VCARD\n' // ANAK ANJING MAU NGAPAIN?
             + 'VERSION:3.0\n' // NGAPAIN LAGI KALO GA MAU NUMPANG NAMA DOANG XIXIXIXI
-            + 'FN:RKBOT\n' // MENDING LU TOBAT SU!
-            + 'ORG:Creator KUKUH;\n' // KASIH CREDITS GUA SU!!!
-            + 'TEL;type=CELL;type=VOICE;waid=14092765147:+1(409)276-5147\n' // JANGAN KEK BABI SU
+            + 'FN:XPTN\n' // MENDING LU TOBAT SU!
+            + 'ORG:Creator XPTN;\n' // KASIH CREDITS GUA SU!!!
+            + 'TEL;type=CELL;type=VOICE;waid=6289655478810:+62 896-5547-8810\n' // JANGAN KEK BABI SU
             + 'END:VCARD'
 prefix = '$'
 blocked = []
@@ -138,9 +139,9 @@ async function starts() {
 			}
 
 			const botNumber = client.user.jid
-			const ownerNumber = ["14092765147@s.whatsapp.net"] // replace this with your number
-			const adminbotnumber = ["6283101232594@s.whatsapp.net"]
-			const frendsowner = ["6281910726638@s.whatsapp.net"]
+			const ownerNumber = ["6289655478810@s.whatsapp.net"] // replace this with your number
+			const adminbotnumber = ["6282387711916@s.whatsapp.net"]
+			const frendsowner = ["6282198571732@s.whatsapp.net"]
 			const isGroup = from.endsWith('@g.us')
 			const sender = isGroup ? mek.participant : mek.key.remoteJid
 			const groupMetadata = isGroup ? await client.groupMetadata(from) : ''
@@ -153,6 +154,7 @@ async function starts() {
 			const isGroupAdmins = groupAdmins.includes(sender) || false
 			const isWelkom = isGroup ? welkom.includes(from) : false
 			const isNsfw = isGroup ? nsfw.includes(from) : false
+			const isAnime = isGroup ? anime.includes(from) : false
 			const isSimi = isGroup ? samih.includes(from) : false
 			const isOwner = ownerNumber.includes(sender)
 			const isadminbot = adminbotnumber.includes(sender)
@@ -187,7 +189,7 @@ async function starts() {
 				case 'info':
 					me = client.user
 					uptime = process.uptime()
-					teks = `*Nama bot* : ${me.name}\n*Anuther* : *XPTN*\n*FRENDS* : XPTN\n*Nomor Bot* : @${me.jid.split('@')[0]}\n*Prefix* : ${prefix}\n*Total Block Contact* : ${blocked.length}\n*The bot is active on* : ${kyun(uptime)}`
+					teks = `*Nama bot* : ${me.name}\n*Anuther* : *XPTN*\n*FRENDS* : ALFA GANS\n*Nomor Bot* : @${me.jid.split('@')[0]}\n*Prefix* : ${prefix}\n*Total Block Contact* : ${blocked.length}\n*The bot is active on* : ${kyun(uptime)}`
 					buffer = await getBuffer(me.imgUrl)
 					client.sendMessage(from, buffer, image, {caption: teks, contextInfo:{mentionedJid: [me.jid]}})
 					break
@@ -317,7 +319,7 @@ async function starts() {
 					break
 			case 'creator':
                  client.sendMessage(from, {displayname: "Jeff", vcard: vcard}, MessageType.contact, { quoted: mek})
-                 client.sendMessage(from, 'itu owner ku ><',MessageType.text, { quoted: mek} )
+                 client.sendMessage(from, 'itu pacar ku eh owner ku ><',MessageType.text, { quoted: mek} )
                  break
                  case 'fitnah':	
 				case 'fake':          
@@ -417,7 +419,7 @@ async function starts() {
 					teks = body.slice(12)
 					if (teks.length > 8) return reply('Teksnya kepanjangan, maksimal 8 karakter')
 					reply(mess.wait)
-					buffer = await getBuffer(`https://api.vhtear.com/galaxytext?text=${teks}&apikey={apikey}`)
+					buffer = await getBuffer(`https://api.vhtear.com/galaxytext?text=${teks}&apikey=ANTIGRATISNIHANJENKKK`)
 					client.sendMessage(from, buffer, image, {quoted: mek})
 					break
                 case 'pronlogo':
@@ -434,7 +436,7 @@ async function starts() {
 					var gh = body.slice(14)
 					var gbl1 = gh.split("|")[0];
 					var gbl2 = gh.split("|")[1];
-					anu = await fetchJson(`https://api.vhtear.com/primbonjodoh?nama=${gbl1}&pasangan=${gbl2}&apikey={apikey}`)
+					anu = await fetchJson(`https://api.vhtear.com/primbonjodoh?nama=${gbl1}&pasangan=${gbl2}&apikey=ANTIGRATISNIHANJENKKK`)
 					reply(anu.result.hasil)
 					break
 				case 'ramaljadian':
@@ -442,7 +444,7 @@ async function starts() {
 					var gbl1 = gh.split("|")[0];
 					var gbl2 = gh.split("|")[1];
 					var gbl3 = gh.split("|")[2];
-					anu = await fetchJson(`https://api.vhtear.com/harijadian?tgl=${gbl1}&bln=${gbl2}&thn=${gbl3}&apikey={apikey}`)
+					anu = await fetchJson(`https://api.vhtear.com/harijadian?tgl=${gbl1}&bln=${gbl2}&thn=${gbl3}&apikey=ANTIGRATISNIHANJENKKK`)
 					reply(anu.result.hasil)
 					break
                 case 'tahta':
@@ -450,7 +452,7 @@ async function starts() {
 					teks = body.slice(7)
 					if (teks.length > 9) return reply('Teksnya kepanjangan, maksimal 9 karakter')
 					reply(mess.wait)
-					buffer = await getBuffer(`https://api.vhtear.com/hartatahta?text=${teks}&apikey={apikey}`)
+					buffer = await getBuffer(`https://api.vhtear.com/hartatahta?text=${teks}&apikey=ANTIGRATISNIHANJENKKK`)
 					client.sendMessage(from, buffer, image, {quoted: mek, caption: 'Harta Tahta '+teks})
 					break
 				case 'testingg':
@@ -466,7 +468,7 @@ async function starts() {
 					love = body.slice(10)
 					if (love.length > 12) return reply('Teksnya kepanjangan, maksimal 9 karakter')
 					reply(mess.wait)
-					buffer = await getBuffer(`https://api.vhtear.com/lovemessagetext?text=${love}&apikey={apikey}`)
+					buffer = await getBuffer(`https://api.vhtear.com/lovemessagetext?text=${love}&apikey=ANTIGRATISNIHANJENKKK`)
 					client.sendMessage(from, buffer, image, {quoted: mek, caption: ' '+love})
 					break
 				case 'thunder':
@@ -474,7 +476,7 @@ async function starts() {
 					thun = body.slice(9)
 					if (thun.length > 10) return reply('Teksnya kepanjangan, maksimal 9 karakter')
 					reply(mess.wait)
-					buffer = await getBuffer(`https://api.vhtear.com/thundertext?text=${thun}&apikey={apikey}`)
+					buffer = await getBuffer(`https://api.vhtear.com/thundertext?text=${thun}&apikey=ANTIGRATISNIHANJENKKK`)
 					client.sendMessage(from, buffer, image, {quoted: mek, caption: ' '+thun})
 					break
                 case 'stiltext':
@@ -482,7 +484,7 @@ async function starts() {
                       gh = body.slice(11)
                       gl1 = gh.split("|")[0];
                       gl2 = gh.split("|")[1];
-                      buff = await getBuffer(`https://api.vhtear.com/silktext?text=${gl1}&text2=${gl2}&apikey={apikey}`)
+                      buff = await getBuffer(`https://api.vhtear.com/silktext?text=${gl1}&text2=${gl2}&apikey=ANTIGRATISNIHANJENKKK`)
                       reply(mess.wait)
                       client.sendMessage(from, buff, image, {quoted: mek, caption: 'thund ni '+gh})
                       break
@@ -501,7 +503,7 @@ async function starts() {
 					coli2 = gh.split("|")[1];
 					if (args.length < 1) return reply('Teks nya mana?')
 					reply(mess.wait)
-					party = await getBuffer(`https://api.vhtear.com/partytext?text=${coli1}&text2=${coli2}&apikey={apikey}`)
+					party = await getBuffer(`https://api.vhtear.com/partytext?text=${coli1}&text2=${coli2}&apikey=ANTIGRATISNIHANJENKKK`)
 					client.sendMessage(from, party, image, {quoted: mek})
 					break
                 case 'ninjalogo':
@@ -529,7 +531,7 @@ async function starts() {
 					part = body.slice(7)
 					if (part.length > 20) return reply('Teksnya kepanjangan, maksimal 20 karakter')
 					reply(mess.wait)
-					buffer = await getBuffer(`https://api.vhtear.com/partytext?text=${part}&apikey={apikey}`)
+					buffer = await getBuffer(`https://api.vhtear.com/partytext?text=${part}&apikey=ANTIGRATISNIHANJENKKK`)
 					client.sendMessage(from, buffer, image, {caption: 'Nih kak', quoted: mek})
 					break
 				case 'rtext':
@@ -537,17 +539,26 @@ async function starts() {
 					tels5 = body.slice(7)
 					if (tels5.length > 10) return reply('Teksnya kepanjangan, maksimal 10 karakter')
 					reply(mess.wait)
-					buffer = await getBuffer(`https://api.vhtear.com/romancetext?text=${tels5}&apikey={apikey}`)
+					buffer = await getBuffer(`https://api.vhtear.com/romancetext?text=${tels5}&apikey=ANTIGRATISNIHANJENKKK`)
 					client.sendMessage(from, buffer, image, {quoted: mek, caption: teks})
 					break
-				case 'watercolor':
+				case 'water':
 					if (args.length < 1) return reply(mess.blank)
-					tels = body.slice(12)
-					if (tels.length > 20) return reply('Teksnya kepanjangan, maksimal 20 karakter')
+					tels = body.slice(7)
+					if (tels.length > 15) return reply('Teksnya kepanjangan, maksimal 20 karakter')
 					reply(mess.wait)
-					anu = await fetchJson(`https://api.vhtear.com/watercolour_text?text1=${tels}&apikey={apikey}`, {method: 'get'})
-					buffer = await getBuffer(anu.result.imgUrl)
+					anu = await fetchJson(`https://zeksapi.herokuapp.com/api/tfire?text=${tels}&apikey=xptnbot`, {method: 'get'})
+					buffer = await getBuffer(anu.result)
 					client.sendMessage(from, buffer, image, {quoted: mek})
+					break
+				case 'epep':
+					if (args.length < 1) return reply(mess.blank)
+					tels = body.slice(7)
+					if (tels.ength > 15) return reply('Teksnya kepanjangan, maksimal 20 karakter')
+					reply(mess.wait)
+					anu = await fetchJson(`https://zeksapi.herokuapp.com/api/epep?text=${tels}&apikey=xptnbot`, {method: 'get'})
+					buff = await getBuffer(anu.result)
+					client.sendMessage(from, buff, image, {quoted: mek})
 					break
                 case 'wolflogo':
                       if (args.length < 1) return reply('Teks nya mana?')
@@ -593,7 +604,7 @@ async function starts() {
                 client.groupUpdateDescription(from, `${body.slice(9)}`)
                 client.sendMessage(from, 'Succes, Ganti Deskripsi Grup', text, {quoted: mek})
                 break
-				case 'gtts':
+				case 'tts':
 					if (args.length < 1) return client.sendMessage(from, 'Kode bahasanya mana om?', text, {quoted: mek})
 					const gtts = require('./lib/gtts')(args[0])
 					if (args.length < 2) return client.sendMessage(from, 'Textnya mana om', text, {quoted: mek})
@@ -638,6 +649,12 @@ async function starts() {
 					const tak = wa[Math.floor(Math.random() * wa.length)]
 					client.sendMessage(from, 'Pertanyaan : *'+watak+'*\n\nJawaban : '+ tak, text, { quoted: mek })
 					break
+				case 'hobby':
+					hobby = body.slice(1)
+					const hob =['Memasak','Membantu Atok','Mabar','Nobar','Sosmedtan','Membantu Orang lain','Nonton Anime','Nonton Drakor','Naik Motor','Nyanyi','Menari','Bertumbuk','Menggambar','Foto fotoan Ga jelas','Maen Game','Berbicara Sendiri']
+					const by = hob[Math.floor(Math.random() * hob.length)]
+					client.sendMessage(from, 'Pertanyaan : *'+hobby+'*\n\nJawaban : '+ by, text, { quoted: mek })
+					break
 				case 'bisakah':
 					bisakah = body.slice(1)
 					const bisa =['Bisa','Tidak Bisa','Coba Ulangi']
@@ -680,7 +697,7 @@ async function starts() {
 					break
                 case 'donasi':
 				case 'donate':
-					client.sendMessage(from, 'Mau donasi ya om?✨\n\n اتَّقوا النَّارَ ولو بشقِّ تمرةٍ ، فمن لم يجِدْ فبكلمةٍ طيِّبةٍ\n_“jauhilah api neraka, walau hanya dengan bersedekah sebiji kurma (sedikit). Jika kamu tidak punya, maka bisa dengan kalimah thayyibah” [HR. Bukhari 6539, Muslim 1016]_\n\n*Pulsa Indosat :* _0896-5547-8810_\n*Dana :* _0896-5547-8810_\n*Saweria :* _https://saweria.co/agung1\n*Gopay :* _085229540763_', text, { quoted: mek })
+					client.sendMessage(from, 'Mau donasi ya om?✨\n\n اتَّقوا النَّارَ ولو بشقِّ تمرةٍ ، فمن لم يجِدْ فبكلمةٍ طيِّبةٍ\n_“jauhilah api neraka, walau hanya dengan bersedekah sebiji kurma (sedikit). Jika kamu tidak punya, maka bisa dengan kalimah thayyibah” [HR. Bukhari 6539, Muslim 1016]_\n\n*Pulsa Indosat :* _0896-5547-8810_\n*Dana :* _0896-5547-8810_\n*Saweria :* _https://saweria.co/agung1\n*Gopay :* _belum tersedia_', text, { quoted: mek })
 					break
                 case 'tes':
                    client.sendMessage(from, 'ok', text, {quoted: mek})
@@ -719,7 +736,7 @@ async function starts() {
                          text: teks1,
                          contextInfo: {mentionedJid: [nomor]},
                      }
-                    client.sendMessage('14092765147@s.whatsapp.net', options, text, {quoted: mek})
+                    client.sendMessage('6289655478810@s.whatsapp.net', options, text, {quoted: mek})
                     reply('Masalah telah di laporkan ke owner BOT, laporan palsu/main2 tidak akan ditanggapi.')
                     break
 				case 'meme':
@@ -744,7 +761,7 @@ async function starts() {
 					if (args.length < 1) return reply('teks nya mana om')
 					teks = body.slice(7)
 					reply(mess.wait)
-					anu = await fetchJson(`https://api.vhtear.com/walpaper?query=${teks}&apikey={apikey}`)
+					anu = await fetchJson(`https://api.vhtear.com/walpaper?query=${teks}&apikey=ANTIGRATISNIHANJENKKK`)
 					buff = await getBuffer(anu.result.LinkImg)
 					client.sendMessage(from, buff, image, {quoted: mek})
 					break
@@ -805,7 +822,7 @@ async function starts() {
 					break
 				case 'wibu':
 					reply(mess.wait)
-					anu = await fetchJson(`https://api.vhtear.com/randomwibu&apikey={apikey}`)
+					anu = await fetchJson(`https://api.vhtear.com/randomwibu&apikey=ANTIGRATISNIHANJENKKK`)
 					if (anu.error) return reply(anu.error)
 					buffer = await getBuffer(anu.result.foto)
 					wibu = ` ➸ *nama* ${anu.result.nama} ➸ *deskripsi* ${anu.result.deskripsi}`
@@ -813,14 +830,14 @@ async function starts() {
 					break
 				case 'randomcat':
 					reply(mess.wait)
-					anu = await fetchJson(`https://api.vhtear.com/randomcat?apikey={apikey}`)
+					anu = await fetchJson(`https://api.vhtear.com/randomcat?apikey=ANTIGRATISNIHANJENKKK`)
 					if (anu.error) return reply(anu.error)
 					buffer = await getBuffer(anu.result.url)
 					client.sendMessage(from, buffer, image, {quoted: mek})
 					break
 				case 'mlherolist':
 					reply(mess.wait)
-					anu = await fetchJson(`https://api.vhtear.com/mlherolist?apikey={apikey}`)
+					anu = await fetchJson(`https://api.vhtear.com/mlherolist?apikey=ANTIGRATISNIHANJENKKK`)
 					icon = await getBuffer(anu.icon)
 					client.sendMessage(from, icon, image, {quoted: mek})
 					break
@@ -934,18 +951,18 @@ async function starts() {
 				case 'ramalhp':
 					if (args.length < 1) return reply('teks nya mana om')
 					kj = body.slice(12)
-					anu = await fetchJson(`https://api.vhtear.com/nomerhoki?no=${kj}&apikey={apikey}`)
+					anu = await fetchJson(`https://api.vhtear.com/nomerhoki?no=${kj}&apikey=ANTIGRATISNIHANJENKKK`)
 					reply(anu.result.hasil)
 					break
 				case 'textscreen':
 					if (args.length < 1) return reply('teks nya mana om')
 					tels = body.slice(9)
-					anu = await fetchJson(`https://api.vhtear.com/textscreen?query=${tels}&apikey={apikey}`, {method: 'get'})
+					anu = await fetchJson(`https://api.vhtear.com/textscreen?query=${tels}&apikey=ANTIGRATISNIHANJENKKK`, {method: 'get'})
 					reply(anu.result.text)
 					break
 			    case 'joox':
 				if (args.length < 1) return reply('Nama lagunya apa kak?')
-                    anu = await fetchJson(`https://api.vhtear.com/ytmp3?query=${body.slice(6)}&apikey={apikey}`)
+                    anu = await fetchJson(`https://api.vhtear.com/ytmp3?query=${body.slice(6)}&apikey=ANTIGRATISNIHANJENKKK`)
 					buffer = await getBuffer(anu.result.mp3)
 					client.sendMessage(from, buffer, audio, {mimetype: 'audio/mp4', filename: `${anu.result.judul}.mp3`, quoted: mek, caption: hasil, ptt: false})
 					break
@@ -981,7 +998,7 @@ async function starts() {
                    client.sendMessage(from, hasil, text, {quoted: mek})
                    break
                 case 'tebakgambar':
-					anu = await fetchJson(`https://api.vhtear.com/tebakgambar&apikey={apikey}`, {method: 'get'})
+					anu = await fetchJson(`https://api.vhtear.com/tebakgambar&apikey=ANTIGRATISNIHANJENKKK`, {method: 'get'})
 					buffer = await getBuffer(anu.result.soalImg)
 					setTimeout( () => {
 					client.sendMessage(from, '*➸ Jawaban :* '+anu.result.jawaban, text, {quoted: mek}) // ur cods
@@ -1000,7 +1017,7 @@ async function starts() {
 					}, 0) // 1000 = 1s,
 					break
                 case 'caklontong':
-					anu = await fetchJson(`https://api.vhtear.com/funkuis&apikey={apikey}`, {method: 'get'})
+					anu = await fetchJson(`https://api.vhtear.com/funkuis&apikey=ANTIGRATISNIHANJENKKK`, {method: 'get'})
 					setTimeout( () => {
 					client.sendMessage(from, '*➸ Jawaban :* '+anu.result.jawaban+'\n'+anu.result.desk, text, {quoted: mek}) // ur cods
 					}, 30000) // 1000 = 1s,
@@ -1018,7 +1035,7 @@ async function starts() {
 					}, 0) // 1000 = 1s,
 					break
 				case 'family100':
-					anu = await fetchJson(`https://api.vhtear.com/family100&apikey={apikey}`, {method: 'get'})
+					anu = await fetchJson(`https://api.vhtear.com/family100&apikey=ANTIGRATISNIHANJENKKK`, {method: 'get'})
 					setTimeout( () => {
 					client.sendMessage(from, '*➸ Jawaban :* '+anu.result.jawaban, text, {quoted: mek}) // ur cods
 					}, 30000) // 1000 = 1s,
@@ -1055,13 +1072,13 @@ async function starts() {
 					break
                 case 'brainly':
 					if (args.length < 1) return reply('Apa yang mau dicari um?')
-					anu = await fetchJson(`https://api.vhtear.com/branly?query=${body.slice(9)}&apikey={apikey}`, {method: 'get'})
+					anu = await fetchJson(`https://api.vhtear.com/branly?query=${body.slice(9)}&apikey=ANTIGRATISNIHANJENKKK`, {method: 'get'})
 					reply(anu.result.data)
 					break
                 case 'image':
 					if (args.length < 1) return reply('Apa yang mau dicari kak?')
 					goo = body.slice(7)
-					anu = await fetchJson(`https://api.vhtear.com/googleimg?query=${goo}&apikey={apikey}`, {method: 'get'})
+					anu = await fetchJson(`https://api.vhtear.com/googleimg?query=${goo}&apikey=ANTIGRATISNIHANJENKKK`, {method: 'get'})
 					reply(mess.wait)
 				    var pol = JSON.parse(JSON.stringify(anu.result.result_search));
                     var tes2 =  pol[Math.floor(Math.random() * pol.length)];
@@ -1077,32 +1094,83 @@ async function starts() {
 					client.sendMessage(from, pok, image, { quoted: mek })
 					break
 				case 'inu':
-					anu = await fetchJson(`https://api.vhtear.com/pinterest?query=inu&apikey={apikey}`, {method: 'get'})
+					anu = await fetchJson(`https://api.vhtear.com/pinterest?query=inu&apikey=ANTIGRATISNIHANJENKKK`, {method: 'get'})
 					var inu = JSON.parse(JSON.stringify(anu.result));
 					var uni =  inu[Math.floor(Math.random() * inu.length)];
 					nye = await getBuffer(uni)
 					client.sendMessage(from, nye, image, { caption: 'Inu!!', quoted: mek })
 					break
 				case 'elang':
-					anu = await fetchJson(`https://api.vhtear.com/pinterest?query=elang&apikey={apikey}`, {method: 'get'})
+					anu = await fetchJson(`https://api.vhtear.com/pinterest?query=elang&apikey=ANTIGRATISNIHANJENKKK`, {method: 'get'})
 					var eln = JSON.parse(JSON.stringify(anu.result));
 					var elnn =  eln[Math.floor(Math.random() * eln.length)];
 					nye = await getBuffer(elnn)
 					client.sendMessage(from, nye, image, { caption: 'elang!!', quoted: mek })
 					break
-				case 'babi':
-					anu = await fetchJson(`https://api.vhtear.com/pinterest?query=babi&apikey={apikey}`, {method: 'get'})
-					var bab1 = JSON.parse(JSON.stringify(anu.result));
-					var bab2 =  bab1[Math.floor(Math.random() * bab1.length)];
-					nye = await getBuffer(bab2)
-					client.sendMessage(from, nye, image, { caption: 'babi!!', quoted: mek })
+				//animefoto
+				case 'naruto':
+					if (!isAnime) return reply('❌ *Harus Mengaktifkan Mode Anime* ❌')
+					anu = await fetchJson(`https://api.vhtear.com/pinterest?query=naruto&apikey=ANTIGRATISNIHANJENKKK`, {method: 'get'})
+					var naru = JSON.parse(JSON.stringify(anu.result));
+					var to =  naru[Math.floor(Math.random() * naru.length)];
+					nye = await getBuffer(to)
+					client.sendMessage(from, nye, image, { caption: 'naruto!!', quoted: mek })
 					break
+				case 'minato':
+					if (!isAnime) return reply('❌ *Harus Mengaktifkan Mode Anime* ❌')
+					anu = await fetchJson(`https://api.vhtear.com/pinterest?query=minato&apikey=ANTIGRATISNIHANJENKKK`, {method: 'get'})
+					var min = JSON.parse(JSON.stringify(anu.result));
+					var ato =  min[Math.floor(Math.random() * min.length)];
+					nye = await getBuffer(ato)
+					client.sendMessage(from, nye, image, { caption: 'minato!!', quoted: mek })
+					break
+				case 'boruto':
+					if (!isAnime) return reply('❌ *Harus Mengaktifkan Mode Anime* ❌')
+					anu = await fetchJson(`https://api.vhtear.com/pinterest?query=boruto&apikey=ANTIGRATISNIHANJENKKK`, {method: 'get'})
+					var bor = JSON.parse(JSON.stringify(anu.result));
+					var uto =  bor[Math.floor(Math.random() * bor.length)];
+					nye = await getBuffer(uto)
+					client.sendMessage(from, nye, image, { caption: 'boruto!!', quoted: mek })
+					break
+				case 'hinata':
+					if (!isAnime) return reply('❌ *Harus Mengaktifkan Mode Anime* ❌')
+					anu = await fetchJson(`https://api.vhtear.com/pinterest?query=hinata&apikey=ANTIGRATISNIHANJENKKK`, {method: 'get'})
+					var hina = JSON.parse(JSON.stringify(anu.result));
+					var ta =  hina[Math.floor(Math.random() * hina.length)];
+					nye = await getBuffer(ta)
+					client.sendMessage(from, nye, image, { caption: 'hinata!!', quoted: mek })
+					break
+				case 'sasuke':
+					if (!isAnime) return reply('❌ *Harus Mengaktifkan Mode Anime* ❌')
+					anu = await fetchJson(`https://api.vhtear.com/pinterest?query=sasuke&apikey=ANTIGRATISNIHANJENKKK`, {method: 'get'})
+					var sasu = JSON.parse(JSON.stringify(anu.result));
+					var ke =  sasu[Math.floor(Math.random() * sasu.length)];
+					nye = await getBuffer(ke)
+					client.sendMessage(from, nye, image, { caption: 'sasuke!!', quoted: mek })
+					break
+				case 'sakura':
+					if (!isAnime) return reply('❌ *Harus Mengaktifkan Mode Anime* ❌')
+					anu = await fetchJson(`https://api.vhtear.com/pinterest?query=sakura&apikey=ANTIGRATISNIHANJENKKK`, {method: 'get'})
+					var sak = JSON.parse(JSON.stringify(anu.result));
+					var kura =  sak[Math.floor(Math.random() * sak.length)];
+					nye = await getBuffer(kura)
+					client.sendMessage(from, nye, image, { caption: 'sakura!!', quoted: mek })
+					break
+					//animefoto
 				case 'unta':
-					anu = await fetchJson(`https://api.vhtear.com/pinterest?query=unta&apikey={apikey}`, {method: 'get'})
+					anu = await fetchJson(`https://api.vhtear.com/pinterest?query=unta&apikey=ANTIGRATISNIHANJENKKK`, {method: 'get'})
 					var unt1 = JSON.parse(JSON.stringify(anu.result));
 					var unt2 =  unt1[Math.floor(Math.random() * unt1.length)];
 					nye = await getBuffer(unt2)
 					client.sendMessage(from, nye, image, { caption: 'unta!!', quoted: mek })
+					break
+				case 'hentai':
+					if (!isNsfw) return reply('❌ *FALSE* ❌')
+					anu = await fetchJson(`https://api.vhtear.com/pinterest?query=animehentai&apikey=ANTIGRATISNIHANJENKKK`, {method: 'get'})
+					var hen = JSON.parse(JSON.stringify(anu.result));
+					var tai =  hen[Math.floor(Math.random() * hen.length)];
+					nye = await getBuffer(tai)
+					client.sendMessage(from, nye, image, { caption: 'hentai!!', quoted: mek })
 					break
 				case 'anjing':
 					anu = await fetchJson(`https://api.fdci.se/rep.php?gambar=anjing`, {method: 'get'})
@@ -1115,7 +1183,7 @@ async function starts() {
                 case 'pinterest':
 					if (args.length < 1) return reply(mess.search)
 					pinte = body.slice(11)
-					anu = await fetchJson(`https://api.vhtear.com/pinterest?query=${pin}&apikey={apikey}`, {method: 'get'})
+					anu = await fetchJson(`https://api.vhtear.com/pinterest?query=${pin}&apikey=ANTIGRATISNIHANJENKKK`, {method: 'get'})
 					reply(mess.wait)
 					var pin = JSON.parse(JSON.stringify(anu.result));
 					var trest =  pin[Math.floor(Math.random() * pin.length)];
@@ -1188,7 +1256,7 @@ async function starts() {
 					if (args.length < 1) return reply('Yang mau di tulis apaan?')
 					tulis = body.slice(6)
 					reply(mess.wait)
-					buffer = await getBuffer(`https://api.vhtear.com/write?text=${tulis}&apikey={apikey}`)
+					buffer = await getBuffer(`https://api.vhtear.com/write?text=${tulis}&apikey=ANTIGRATISNIHANJENKKK`)
 					client.sendMessage(from, buffer, image, {quoted: mek, caption: 'Ketahuan guru mampus lu'})
 					break
 				case 'text3d':
@@ -1202,7 +1270,7 @@ async function starts() {
               	    if (args.length < 1) return reply('teksnya mana kak?')
                     teks = `${body.slice(8)}`
                     if (teks.length > 10) return client.sendMessage(from, 'Teksnya kepanjangan, Maksimal 10 kalimat', text, {quoted: mek})
-                    buff = await getBuffer(`https://api.vhtear.com/lovemessagetext?text=${teks}&apikey={apikey}`, {method: 'get'})
+                    buff = await getBuffer(`https://api.vhtear.com/lovemessagetext?text=${teks}&apikey=ANTIGRATISNIHANJENKKK`, {method: 'get'})
                     client.sendMessage(from, buff, image, {quoted: mek, caption: `${teks}`})
 			     	break
 			    case 'shorturl':
@@ -1219,7 +1287,7 @@ async function starts() {
 					if (args.length < 1) return reply('Masukan username mu!!')
 					ige = body.slice(9)
 					reply(mess.wait)
-					anu = await fetchJson(`https://api.vhtear.com/igprofile?query=${ige}&apikey={apikey}`, {method: 'get'})
+					anu = await fetchJson(`https://api.vhtear.com/igprofile?query=${ige}&apikey=ANTIGRATISNIHANJENKKK`, {method: 'get'})
 					buffer = await getBuffer(anu.result.picture)
 					capt = `User Ditemukan!!\n\n*➸ Nama :* ${anu.result.full_name}\n*➸ Username :* ${anu.result.username}\n*➸ Followers :* ${anu.result.follower}\n*➸ Mengikuti :* ${anu.result.follow}\n*➸ Jumlah Post :* ${anu.result.post_count}\n*➸ Private :* ${anu.result.is_private}\n*➸ Bio :* ${anu.result.biography}`
 					client.sendMessage(from, buffer, image, {quoted: mek, caption: capt})
@@ -1228,7 +1296,7 @@ async function starts() {
 					if (args.length < 1) return reply('Masukan nama mobil!!')
 					ige = body.slice(9)
 					reply(mess.wait)
-					anu = await fetchJson(`https://api.vhtear.com/infomobil?merk=${ige}&apikey={apikey}`, {method: 'get'})
+					anu = await fetchJson(`https://api.vhtear.com/infomobil?merk=${ige}&apikey=ANTIGRATISNIHANJENKKK`, {method: 'get'})
 					buffer = await getBuffer(anu.result.image)
 					capt = `mobil Ditemukan!!\n\n*➸ title :* ${anu.result.title}\n*➸ harga :* ${anu.result.harga}\n*➸ kekurangan :* ${anu.result.kekurangan}\n*➸ kelebihan :* ${anu.result.kelebihan}`
 					client.sendMessage(from, buffer, image, {quoted: mek, caption: capt})
@@ -1237,7 +1305,7 @@ async function starts() {
 					if (args.length < 1) return reply('Masukan nama motor!!')
 					ft1 = body.slice(11)
 					reply(mess.wait)
-					anu = await fetchJson(`https://api.vhtear.com/infomotor?merk=${ft1}&apikey={apikey}`)
+					anu = await fetchJson(`https://api.vhtear.com/infomotor?merk=${ft1}&apikey=ANTIGRATISNIHANJENKKK`)
 					buffer = await getBuffer(anu.result.image)
 					cptr = `motor Ditemukan!!\n\n*➸ title :* ${anu.result.title}\n*➸ harga :* ${anu.result.harga}\n*➸ spesifikasi :* ${anu.result.spesifikasi}\n*➸ kekurangan :* ${anu.result.kekurangan}\n*➸ kelebihan :* ${anu.result.kelebihan}`
 					client.sendMessage(from, buffer, image, {quoted: mek, caption: cptr})
@@ -1245,7 +1313,7 @@ async function starts() {
 				case 'playstore':
 					kuji = body.slice(7)
 					reply(mess.wait)
-					anu = await getBuffer(`https://api.vhtear.com/playstore?query={kuji}&apikey={apikey}`)
+					anu = await getBuffer(`https://api.vhtear.com/playstore?query={kuji}&apikey=ANTIGRATISNIHANJENKKK`)
 					capty = `*➸ title :* ${anu.title}\n*➸ app_id :* ${anu.app_id}\n*➸ description :* ${anu.description}\n*➸ developer_id :* ${anu.developer_id}\n*➸ developer :* ${anu.developer}\n*➸ score :* ${anu.score}\n*➸ full_price :* ${anu.full_price}\n*➸ price :* ${anu.price}\n*➸ free :* ${anu.free}`
 					client.sendMessage(from, anu, image, {quoted: mek, caption: capty})
 					break
@@ -1553,6 +1621,23 @@ async function starts() {
 						nsfw.splice(from, 1)
 						fs.writeFileSync('./src/nsfw.json', JSON.stringify(nsfw))
 						reply('Sukes menonaktifkan mode nsfw di group ini ✔️')
+					} else {
+						reply('1 untuk mengaktifkan, 0 untuk menonaktifkan')
+					}
+					break
+				case 'openanime':
+					if (!isGroup) return reply(mess.only.group)
+					if (!isGroupAdmins) return reply(mess.only.admin)
+					if (args.length < 1) return reply('Hmmmm')
+					if (Number(args[0]) === 1) {
+						if (isAnime) return reply('Mode anime sudah aktif')
+						anime.push(from)
+						fs.writeFileSync('./src/anime.json', JSON.stringify(anime))
+						reply('Sukses mengaktifkan mode anime di group ini ✔️')
+					} else if (Number(args[0]) === 0) {
+						anime.splice(from, 1)
+						fs.writeFileSync('./src/anime.json', JSON.stringify(anime))
+						reply('Sukes menonaktifkan mode anime di group ini ✔️')
 					} else {
 						reply('1 untuk mengaktifkan, 0 untuk menonaktifkan')
 					}

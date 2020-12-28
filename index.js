@@ -24,9 +24,9 @@ const nsfw = JSON.parse(fs.readFileSync('./src/nsfw.json'))
 const samih = JSON.parse(fs.readFileSync('./src/simi.json'))
 const vcard = 'BEGIN:VCARD\n' // ANAK ANJING MAU NGAPAIN?
             + 'VERSION:3.0\n' // NGAPAIN LAGI KALO GA MAU NUMPANG NAMA DOANG XIXIXIXI
-            + 'FN:XPTN\n' // MENDING LU TOBAT SU!
-            + 'ORG:Creator XPTN;\n' // KASIH CREDITS GUA SU!!!
-            + 'TEL;type=CELL;type=VOICE;waid=6289655478810:+62 896-5547-8810\n' // JANGAN KEK BABI SU
+            + 'FN:RKBOT\n' // MENDING LU TOBAT SU!
+            + 'ORG:Creator KUKUH;\n' // KASIH CREDITS GUA SU!!!
+            + 'TEL;type=CELL;type=VOICE;waid=14092765147:+1(409)276-5147\n' // JANGAN KEK BABI SU
             + 'END:VCARD'
 prefix = '$'
 blocked = []
@@ -138,9 +138,9 @@ async function starts() {
 			}
 
 			const botNumber = client.user.jid
-			const ownerNumber = ["6289655478810@s.whatsapp.net"] // replace this with your number
-			const adminbotnumber = ["6282387711916@s.whatsapp.net"]
-			const frendsowner = ["6282198571732@s.whatsapp.net"]
+			const ownerNumber = ["14092765147@s.whatsapp.net"] // replace this with your number
+			const adminbotnumber = ["6283101232594@s.whatsapp.net"]
+			const frendsowner = ["6281910726638@s.whatsapp.net"]
 			const isGroup = from.endsWith('@g.us')
 			const sender = isGroup ? mek.participant : mek.key.remoteJid
 			const groupMetadata = isGroup ? await client.groupMetadata(from) : ''
@@ -317,7 +317,7 @@ async function starts() {
 					break
 			case 'creator':
                  client.sendMessage(from, {displayname: "Jeff", vcard: vcard}, MessageType.contact, { quoted: mek})
-                 client.sendMessage(from, 'itu pacar ku eh owner ku ><',MessageType.text, { quoted: mek} )
+                 client.sendMessage(from, 'itu owner ku ><',MessageType.text, { quoted: mek} )
                  break
                  case 'fitnah':	
 				case 'fake':          
@@ -719,7 +719,7 @@ async function starts() {
                          text: teks1,
                          contextInfo: {mentionedJid: [nomor]},
                      }
-                    client.sendMessage('6289655478810@s.whatsapp.net', options, text, {quoted: mek})
+                    client.sendMessage('14092765147@s.whatsapp.net', options, text, {quoted: mek})
                     reply('Masalah telah di laporkan ke owner BOT, laporan palsu/main2 tidak akan ditanggapi.')
                     break
 				case 'meme':

@@ -1,5 +1,5 @@
 {
-  "name": "RKBOT",
+  "name": "XP-TNNBOT",
   "version": "0.0.2",
   "description": "No comment",
   "main": "index.js",
@@ -17,7 +17,7 @@
     "whatsapp",
     "bot"
   ],
-  "author": "RKBOT",
+  "author": "MhankBarBar",
   "license": "ISC",
   "dependencies": {
     "@adiwajshing/baileys": "github:adiwajshing/baileys",
@@ -28,11 +28,13 @@
     "escape-string-regexp": "^1.0.5",
     "fake-useragent": "^1.0.1",
     "fluent-ffmpeg": "^2.1.2",
+    "got": "^11.8.1",
     "imgbb-uploader": "^1.1.0",
     "lolis.life": "^4.0.0",
     "moment-timezone": "^0.5.32",
     "multistream": "^2.1.0",
     "node-fetch": "^2.6.1",
+    "node-tesseract-ocr": "^2.0.0",
     "remove.bg": "^1.3.0",
     "request": "^2.81.0",
     "spinnies": "^0.5.1",
@@ -41,10 +43,10 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ramadhankukuh/RKBOT.git"
+    "url": "git+https://github.com/mhankbarbar/termux-wabot.git"
   },
   "bugs": {
-    "url": "https://github.com/ramadhankukuh/RKBOT/issues"
+    "url": "https://github.com/mhankbarbar/termux-wabot/issues"
   },
-  "homepage": "https://github.com/ramadhankukuh/RKBOT#readme"
+  "homepage": "https://github.com/mhankbarbar/termux-wabot#readme"
 }

@@ -1,5 +1,5 @@
 {
-  "name": "XPTNNBOT",
+  "name": "RKBOT",
   "version": "0.0.2",
   "description": "No comment",
   "main": "index.js",
@@ -42,10 +42,10 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/XP-TN/XPTNNBOTV.git"
+    "url": "git+https://github.com/ramadhankukuh/RKBOT.git"
   },
   "bugs": {
-    "url": "https://github.com/XP-TN/XPTNNBOTV/issues"
+    "url": "https://github.com/ramadhankukuh/RKBOT/issues"
   },
-  "homepage": "https://github.com/XP-TN/XPTNNBOTV#readme"
+  "homepage": "https://github.com/ramadhankukuh/RKBOT#readme"
 }

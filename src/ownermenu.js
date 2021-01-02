@@ -18,7 +18,7 @@ const ownermenu = (prefix) => {
 •├❍  *${prefix}unban*
 •├❍  *${prefix}ban*
 •├❍  *${prefix}getses*
- ╚═〘 XPTN BOT 〙
+ ╚═〘 RKBOT 〙
 `
 
 }

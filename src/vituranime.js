@@ -1,6 +1,6 @@
 const vituranime = (prefix) => { 
 	return `                 
-_*>XPTN BOT<*_                
+_*>RKBOT<*_                
  
  Hi, _*undefined*_ 
  Berikut adalah fitur pada bot!
@@ -31,7 +31,7 @@ _*Wibu*_
        Ketik *${prefix}owner* untuk melihat kontak owner
          Mau donasi? 089655478810(Tri)
          Jika tidak ingin donasi bantu Follow Ig aja kak 
-         _instagram.com/_xptn
-    _*XPTNBOT © 2020*_`
+         _instagram.com/ramadhankukuh
+    _*RKBOT © 2020*_`
 }
 exports.vituranime = vituranime
